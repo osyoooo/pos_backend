@@ -11,11 +11,11 @@ app = FastAPI()
 def get_conn():
     return psycopg.connect(
         host=os.getenv("DB_HOST"),
-        port=os.getenv("DB_PORT"),
+        port=int(os.getenv("DB_PORT")),
         dbname=os.getenv("DB_NAME"),
         user=os.getenv("DB_USER"),
         password=os.getenv("DB_PASSWORD"),
-        options='-c client_encoding=UTF8'
+        sslmode="require"
     )
 
 @app.get("/")
