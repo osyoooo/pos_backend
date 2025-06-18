@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# VSCode
+.vscode/
+
+# macOS / Windows
+.DS_Store
+Thumbs.db
+
+# Conda environment
+.env
+*.env
+*.venv/
+*.conda/
+*.ipynb_checkpoints/
+
+# Pipenv / Poetry / other virtualenv
+*.egg-info/
+dist/
+build/
+pip-wheel-metadata/
+
+# Uvicorn logs
+*.log
+
+# PyCharm
+.idea/
+
+# SQLite（もし使ってたら）
+*.sqlite
+*.db
+
+# Envファイル
+.env.local
+.env.production
+.env.development
+
+# Supabase CLI or export files
+.supabase/
+supabase/config.toml
+
+# Optional: if you use Render's deploy settings
+render.yaml
