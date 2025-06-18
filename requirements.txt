@@ -11,10 +11,3 @@ pydantic==2.5.0
 
 # --- Request Handling ---
 python-multipart==0.0.6
-
-# --- Security (Optional) ---
-passlib[bcrypt]==1.7.4
-python-jose[cryptography]==3.3.0
-
-# --- Development tools ---
-httpx==0.25.0
