@@ -2,10 +2,9 @@ from fastapi import FastAPI, HTTPException
 import psycopg2
 import os
 from dotenv import load_dotenv
-from pathlib import Path
 
-# .env の読み込み
-load_dotenv(dotenv_path=Path(__file__).resolve().parent / ".env")
+# .env の読み込み（シンプル化）
+load_dotenv()
 
 app = FastAPI()
 
