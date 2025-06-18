@@ -1,5 +1,5 @@
 from fastapi import FastAPI, HTTPException
-import psycopg2
+import psycopg
 import os
 from dotenv import load_dotenv
 
@@ -9,10 +9,10 @@ load_dotenv()
 app = FastAPI()
 
 def get_conn():
-    return psycopg2.connect(
+    return psycopg.connect(
         host=os.getenv("DB_HOST"),
         port=os.getenv("DB_PORT"),
-        database=os.getenv("DB_NAME"),
+        dbname=os.getenv("DB_NAME"),
         user=os.getenv("DB_USER"),
         password=os.getenv("DB_PASSWORD"),
         options='-c client_encoding=UTF8'
